@@ -1,20 +1,18 @@
 server: # REST and WS server
-  port: 2333
+  port: 443 # ignore this, use 443 when connecting to your lavalink server - CJ
   address: 0.0.0.0
 lavalink:
   server:
-    password: "youshallnotpass"
+    password: "casper"
     sources:
       youtube: true
       bandcamp: true
       soundcloud: true
       twitch: true
       vimeo: true
-      mixer: true
       http: true
       local: false
-    bufferDurationMs: 400 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
-    frameBufferDurationMs: 5000 # How many milliseconds of audio to keep buffered
+    bufferDurationMs: 400
     youtubePlaylistLoadLimit: 6 # Number of pages at 100 each
     playerUpdateInterval: 5 # How frequently to send player updates to clients, in seconds
     youtubeSearchEnabled: true
@@ -29,7 +27,7 @@ lavalink:
 
 metrics:
   prometheus:
-    enabled: true
+    enabled: false
     endpoint: /metrics
 
 sentry:
